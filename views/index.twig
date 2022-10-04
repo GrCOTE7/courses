@@ -1,0 +1,19 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  Page de base de la structure avec Twig
+  
+  {% include 'parts/main.twig' %}
+  <hr>
+  {% include 'parts/skills.twig' %}
+  <hr>
+  {% include 'parts/portfolio.twig' %}
+  <hr>
+  {% include 'parts/experiences.twig' %}
+  <hr>
+  {% include 'parts/testimonials.twig' %}
+  <hr>
+  {% include 'parts/news.twig' %}
+  <hr>
+  {% include 'parts/contact.twig' %}
+{% endblock %}

@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(253, 253, 253);
+  width: 100%;
+}
+
+main {
+  margin: 10px 20px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+main h2 {
+  color: rgb(0, 60, 255);
+  animation-delay: 1s;
+  --animate-duration: 5s;
+}
+main p {
+  color: #668aff;
+  font-size: 18px;
+  text-align: left;
+}
+main p:last-child {
+  font-weight: bold;
+  color: rgb(238, 0, 255);
+  text-align: center;
+}
+
+p {
+  text-align: right;
+  font-style: italic;
+  color: rgb(0, 68, 87);
+}
+
+main p {
+  animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
