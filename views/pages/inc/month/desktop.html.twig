@@ -1,0 +1,83 @@
+<div class="btn-create-mobile"><a href="../../event">+</a></div>
+<div class="home-page">
+    <div class="left-side">
+        <div class="title-searchbar">
+            <ul>
+                <li><h1><a href="/" title="Revenir à l'accueil">Lagg<span>y</span></a></h1></li>
+                <li><input type="date"></li>
+            </ul>
+        </div>
+        <nav>
+        <h2>{{ data.m.moisFr|capitalize }} {{ data.m.y }}</h2>
+            <div class="container">
+                <div class="container-date">
+                <ul>
+                <li><a href="./week"><button>Semaine</button></a></li>
+                <li><a href="./?m_mois=courant"><button class='active' title="Revenir au mois courant">Mois</button></a></li>
+                <li><a href="./year"><button>Année</button></a></li>
+            </ul>
+                </div>
+                <div class="container-switch">
+                    <ul>
+                        <li><a href='./?m_mois=avant'><button class='active'><</button></a></li>
+                        <li><a href="./?m_mois=courant"><button class='active' title="Revenir au mois courant">Mois&nbsp;courant</button></li>
+                        <li><a href='?m_mois=suivant'><button class='active'>></button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="calendar">
+                <ul class="calendar--days">
+                    {% for i in data.columnsHeads %}
+                        <li>{{ i|capitalize }}</li>
+                    {% endfor %}
+                </ul>
+                 <ul class="calendar--dates">
+                    {% for i in data.m.month %}
+                        <li class="{% if i<0 %}prev{% endif %} {% if i == data.m.d and data.m.m == data.currentMonth  %}active{% endif %}">{{i|abs}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="message-user">
+                <ul>
+                    <li><img src="../assets/calendar.png"></li>
+                    <li> Connecte-toi !</li>
+                </ul>
+            </div>
+            <hr>
+                
+            <div class="side-nav">
+                <ul>
+                    <li>
+                        <h3>{{ data.d.moisFr|capitalize }} {{ data.d.y }}</h3>
+                    </li>
+                    <li><a href='./?d_mois=avant'><button class='active'><</button></a></li>
+                    <li><a href='./?d_mois=suivant'><button class='active'>></button></a></li>
+                </ul>
+            </div>
+            
+            <div class="side-main">
+                <div class="calendar">
+                    <ul class="calendar--days">
+                        {% for i in data.columnsHeads %}
+                            <li>{{ i|first|capitalize }}</li>
+                        {% endfor %}
+                    </ul>
+                    <ul class="calendar--dates">
+                    {% for i in data.d.month %}
+                        <li class="{% if i<0 %}prev{% endif %} {% if i == data.d.d and data.d.m == data.currentMonth  %}active{% endif %}">{{i|abs}}</li>
+                    {% endfor %}
+                </ul>
+                </div>
+            </div>
+            <div class="side-footer">
+                <div class="description"><span>09:00 - 17:00 </span><br>
+                    Intégration des maquettes <br>
+                    Paul, Pierre, Jacques
+                </div>
+            </div>
+        </div>
+</div>

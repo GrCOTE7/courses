@@ -1,13 +1,19 @@
 {
   "name": "gc7/courses",
   "description": "Gestion des cours d'users via organisations",
-  "require": {
-    "twig/twig": "^3.4"
-  },
   "authors": [
     {
       "name": "Lionel COTE",
       "email": "L.COTE@Codeur.ONLINE"
     }
-  ]
+  ],
+  "require": {
+    "twig/twig": "^3.4",
+    "nesbot/carbon": "^2.62",
+    "altorouter/altorouter": "^2.0",
+    "j4mie/idiorm": "^1.5"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.1"
+}
 }

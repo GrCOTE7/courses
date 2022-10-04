@@ -14,9 +14,25 @@ $twig   = new \Twig\Environment($loader, [
 $twig->addGlobal('session', $_SESSION);
 $twig->addExtension(new \Twig\Extension\DebugExtension());
 
-$template = $twig->load('index.twig');
 
-$data['test']='Juste pour voir passages de varaibles OK ;-) !<br>(\'Environ ligne 20 de l\'index général\'';
+$uri = getUri();
+if ($_SESSION['user'] ?? null || $uri == '/migration') {
+    switch ($uri) {
+        case '/':
+            $page = 'home';
+
+            break;
+        
+
+        default:
+            $page = 'error';
+    }
+} else {
+    $page = 'forms';
+}
+
+require_once controllers($page);
+$template = $twig->load('pages/' . $page . 'View.twig');
 
 echo $template->render(
     [

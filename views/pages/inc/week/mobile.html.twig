@@ -1,0 +1,124 @@
+<nav>
+        <h1>Lagg<span>y</span></h1>
+        <ul>
+            <li><img src="../assets/calendar.png" alt="Calendrier"></li>
+            <li><a href="/compte?action=deconnection" title="Déconnection">{{ session.user.name|capitalize }}</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="action-bar">
+        <div class="container-switch">
+            <ul>
+                <li><a href="./week"><button class='active'>S</button></a></li>
+                <li><a href="./?mois=courant"><button>M</button></a></li>
+                <li><a href="./year"><button>A</button></a></li>
+            </ul>
+        </div>
+        <div class="container-button"><button>+</button>
+            </div>
+    </div>
+    <div class="date-bar">
+        <h2>3-9 Octobre, 2022</h2>
+        <ul>
+            <li><a href='?mois=avant'><button class='active'>&lt;</button></a></li>
+            <li><a href='?mois=suivant'><button class='active'>&gt;</button></a></li>
+        </ul>
+    </div>
+
+        <div class="monday">
+            <div class="left-side">
+                <h2>Lun</h2>
+                <div class="number active"><span>3</span></div>
+            </div>
+            <div class="right-side">
+                <div class="description blue"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description orange"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description red"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="tuesday">
+            <div class="left-side">
+                <h3>Mar</h3>
+                <div class="number">4</div>
+            </div>
+            <div class="right-side">
+                <div class="description blue"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description orange"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description red"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="wednesday">
+            <div class="left-side">
+                <h3>Mer</h3>
+                <div class="number">5</div>
+            </div>
+            <div class="right-side">
+                <div class="description orange"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description blue"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description red"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="thursday">
+            <div class="left-side">
+                <h3>Jeu</h3>
+                <div class="number">6</div>
+            </div>
+            <div class="right-side">
+                <div class="description red"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description orange"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description blue"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="friday">
+            <div class="left-side">
+                <h3>Ven</h3>
+                <div class="number">7</div>
+            </div>
+            <div class="right-side">
+                <div class="description blue"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description orange"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description red"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="saturday">
+            <div class="left-side">
+                <h3>Sam</h3>
+                <div class="number">8</div>
+            </div>
+            <div class="right-side">
+                <div class="description orange"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description blue"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description red"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>
+
+        <div class="sunday">
+            <div class="left-side">
+                <h3>Dim</h3>
+                <div class="number">9</div>
+            </div>
+            <div class="right-side">
+                <div class="description red"><div class="hours">08:00-09:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+                <div class="description orange"><div class="hours">09:00-12:00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque debitis
+                    ea eligendi excepturi minus nulla odit tenetur voluptatem voluptates! </div>
+                <div class="description blue"><div class="hours">14:00-17h00</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, tenetur.</div>
+            </div>
+        </div>

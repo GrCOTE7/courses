@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% set title = "Année" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./src/rwdYear.css">
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="desktop">
+        {% include 'pages/inc/year/desktop.html.twig' %}
+    </div>
+    <div class="mobile">
+        {% include 'pages/inc/year/mobile.html.twig' %}
+    </div>
+{% endblock %}

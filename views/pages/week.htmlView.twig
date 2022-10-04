@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% set title = "Semaine" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./src/rwdWeek.css">
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="desktop">
+        {% include 'pages/inc/week/desktop.html.twig' %}
+    </div>
+    <div class="mobile">
+        {% include 'pages/inc/week/mobile.html.twig' %}
+    </div>
+{% endblock %}

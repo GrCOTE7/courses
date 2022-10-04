@@ -1,0 +1,14 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% set title = "Ajouter un évènement" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./src/eventStyle.css">
+{% endblock %}
+
+{% block content %}
+    <body>
+        {% include 'pages/inc/event.html.twig' %}
+    </body>
+{% endblock %}

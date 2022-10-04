@@ -1,0 +1,47 @@
+<nav>
+    <h1>Lagg<span>y</span></h1>
+    <ul>
+        <li><img src="../assets/calendar.png"></li>
+        <li><a href="/compte?action=deconnection" title="Déconnection">{{ session.user.name|capitalize }}</></a></li>
+    </ul>
+</nav>
+<div class="action-bar">
+    <div class="container-switch">
+    <ul>
+        <li><a href="./week"><button>S</button></a></li>
+        <li><a href="./?mois=courant"><button class='active' title="Revenir au mois courant">M</button></a></li>
+        <li><a href="./year"><button>A</button></a></li>
+    </ul>
+    </div>
+    <div class="container-button"><button>+</button>
+    </div>
+</div>
+<div class="date-bar">
+    <h2>{{ data.m.moisFr|capitalize }} {{ data.m.y }}</h2>
+    <ul>
+        <li><a href='?m_mois=avant'><button class='active'>&lt;</button></a></li>
+        <li><a href='?m_mois=suivant'><button class='active'>></button></a></li>
+    </ul>
+</div>
+    
+<main>
+    <div class="calendar">
+        <ul class="calendar--days">
+            {% for i in data.columnsHeads %}
+                <li>{{ i|first|capitalize }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="calendar--dates">
+            {% for i in data.m.month %}
+                <li class="{% if i<0 %}prev{% endif %} {% if i == data.m.d and data.m.m == data.currentMonth  %}active{% endif %}">{{i|abs}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <div class="event-card">
+        <div class="hour">08:30</div>
+        <div class="description">Présentation du jour, <br>2 personnes</div>
+    </div>
+</footer>

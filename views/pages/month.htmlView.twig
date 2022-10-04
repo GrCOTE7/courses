@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% set title = "month" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./src/home.css">
+{% endblock %}
+
+{% block content %}
+    <div class="desktop">
+    {% include 'pages/inc/month/desktop.html.twig' %}
+    </div>
+    <div class="mobile">
+    {% include 'pages/inc/month/mobile.html.twig' %}
+    </div>
+    {{ parent() }}  
+{% endblock %}
