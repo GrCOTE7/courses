@@ -3,7 +3,7 @@
         "data": {
             "id": "cmoatjfqy2w0",
             "created": 1662363896719,
-            "text": "Agenda"
+            "text": "Courses"
         },
         "children": [
             {
@@ -31,7 +31,8 @@
                             "created": 1662364128966,
                             "text": "Model",
                             "hyperlink": "https://dribbble.com/shots/14243726-Collon-Calendar/attachments/5888968?mode=media",
-                            "hyperlinkTitle": ""
+                            "hyperlinkTitle": "",
+                            "font-style": "italic"
                         },
                         "children": []
                     },
@@ -41,7 +42,8 @@
                             "created": 1662364276573,
                             "text": "Maquette\n  (Figma)",
                             "hyperlink": "https://www.figma.com/file/lWDkDvTubS7gT2SpgDKZf0/Calendrier?node-id=0%3A1",
-                            "hyperlinkTitle": ""
+                            "hyperlinkTitle": "",
+                            "font-style": "italic"
                         },
                         "children": []
                     },
@@ -60,28 +62,17 @@
                             "id": "cmob3ctwty80",
                             "created": 1662364665980,
                             "text": "Dépôt GIT\nConsignes",
-                            "hyperlink": "https://gitlab.com/grcote7/agenda",
+                            "hyperlink": "https://github.com/GrCOTE7/courses",
                             "hyperlinkTitle": ""
                         },
-                        "children": [
-                            {
-                                "data": {
-                                    "id": "cmobb2xm3000",
-                                    "created": 1662365271349,
-                                    "text": " Dépôt\nJohnny",
-                                    "hyperlink": "https://gitlab.com/onlineformapro/ofp-projects/04-agenda",
-                                    "hyperlinkTitle": ""
-                                },
-                                "children": []
-                            }
-                        ]
+                        "children": []
                     },
                     {
                         "data": {
                             "id": "cmp6r9qkrsw0",
                             "created": 1662453994395,
                             "text": "UML",
-                            "hyperlink": "https://app.dbdesigner.net/designer/schema/553117",
+                            "hyperlink": "https://app.dbdesigner.net/designer/schema/563246",
                             "hyperlinkTitle": ""
                         },
                         "children": []
