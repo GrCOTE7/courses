@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortFolio Olivier</title>
+  <title>{{ data.title }} | Courses</title>
   <link rel="stylesheet" href="assets/css/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css">
+<script id="__bs_script__" src='./config/browser-sync/sync_gc7.js'></script>
 </head>
 <body>
   <main>
+    {% include 'partials/nav.twig' %}
+    
     {% block content %}
     {% endblock %}
   </main>
-  <p>Paragraphe en dehors de &lt;main&gt;</p>
   <script src="./assets/js/jquery3.6.js"></script>
   <script src="./assets/js/semantic.min.js"></script>
 </body>

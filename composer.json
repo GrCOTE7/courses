@@ -9,8 +9,8 @@
   ],
   "require": {
     "twig/twig": "^3.4",
-    "nesbot/carbon": "^2.62",
     "altorouter/altorouter": "^2.0",
+    "nesbot/carbon": "^2.62",
     "j4mie/idiorm": "^1.5"
   },
   "require-dev": {

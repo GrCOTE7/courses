@@ -59,23 +59,38 @@
                     },
                     {
                         "data": {
-                            "id": "cmob3ctwty80",
-                            "created": 1662364665980,
-                            "text": "Dépôt GIT\nConsignes",
-                            "hyperlink": "https://github.com/GrCOTE7/courses",
-                            "hyperlinkTitle": ""
+                            "id": "cmp6r9qkrsw0",
+                            "created": 1662453994395,
+                            "text": "UML",
+                            "hyperlink": "https://app.dbdesigner.net/designer/schema/563246",
+                            "hyperlinkTitle": "",
+                            "font-weight": "bold"
                         },
                         "children": []
                     },
                     {
                         "data": {
-                            "id": "cmp6r9qkrsw0",
-                            "created": 1662453994395,
-                            "text": "UML",
-                            "hyperlink": "https://app.dbdesigner.net/designer/schema/563246",
-                            "hyperlinkTitle": ""
+                            "id": "cndu2xdou9c0",
+                            "created": 1664957232352,
+                            "text": "Dépôt GIT\nConsignes",
+                            "hyperlink": "https://gitlab.com/onlineformapro/team/courses",
+                            "hyperlinkTitle": "",
+                            "expandState": "expand",
+                            "font-weight": "bold"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmob3ctwty80",
+                                    "created": 1662364665980,
+                                    "text": "Dépôt GIT\nGC7",
+                                    "hyperlink": "https://github.com/GrCOTE7/courses",
+                                    "hyperlinkTitle": "",
+                                    "font-weight": "bold"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },

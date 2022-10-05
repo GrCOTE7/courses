@@ -1,0 +1,15 @@
+{% extends 'layouts/base.twig' %}
+
+{% set title = "Courses" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./src/home.css">
+{% endblock %}
+
+{% block content %}
+{{ data|join }}
+    {# {% include 'pages/inc/event.html.twig' %} #}
+    <h1 class="animate__hinge">Accueil</h1>
+    <p>{{ home.txt }}</p>
+{% endblock %}
