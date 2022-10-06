@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 require_once './vendor/autoload.php';
 require_once './tools/functions.php';
+require_once './tools/router.php';
 require_once './config/settings.php';
 
 $loader = new \Twig\Loader\FilesystemLoader('views');
@@ -14,67 +17,33 @@ $twig->addExtension(new \Twig\Extension\DebugExtension());
 
 
 $router = new AltoRouter();
-// $router->setBasePath('/');
+
+$uri = (explode('/', explode('?', $_SERVER['REQUEST_URI'])[0])[1]) ;
+// aff($uri);
+
+[$uri, $page]= (!$uri) ? ['/', 'home'] : ['/'.$uri, $uri];
+
+// aff([$uri, $page]);
 
 $router->map(
     'GET',
-    '/',
-    function () {
-        require __DIR__.'/controllers/homeController.php';
-        return $data;
+    $uri,
+    function () use ($page, $twig) {
+        return [$template, $data]=router($page, $twig);
     },
-    'home'
+    $uri
 );
-
-$router->map(
-    'GET',
-    '/user',
-    function () {
-        require __DIR__.'/controllers/userController.php';
-        return $data;
-    },
-    'user'
-);
-
-$router->map(
-    'GET',
-    '/users',
-    function () {
-        require __DIR__.'/controllers/usersController.php';
-        return $data;
-    },
-    'users'
-);
-
-$router->map(
-    'GET',
-    '/db',
-    function () {
-        require __DIR__.'/controllers/dbController.php';
-        return $data;
-    },
-    'db'
-);
-// '/courses/user/[i:id]',
 
 $match = $router->match();
 
-// aff($router);
+if (is_array($match) && is_callable($match['target'])) {
+    [$template, $data] = call_user_func_array($match['target'], $match['params']);
+// aff($data);
+} else {
+    // no route was matched
+    echo 'ERROR - Index env. ligne 71';
+    header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+    exit;
+}
 
-// aff($match);
-
-    if (is_array($match) && is_callable($match['target'])) {
-        $data = call_user_func_array($match['target'], $match['params']);
-    // aff($data);
-    } else {
-        // no route was matched
-        echo 'ERROR - Index env. ligne 71';
-        // header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
-    }
-
-    // require_once controllers($page);
-    $template = $twig->load('pages/' . $data['page'] . 'View.twig');
-
-    // aff($router);
-
-    echo $template->render(['data'  => $data ?? null]);
+echo $template->render(['data'  => $data ?? null]);
