@@ -1,78 +1,30 @@
 body {
-  background-color: rgb(255, 128, 0);
+  background-color: rgb(255, 246, 238);
   width: 100%;
 }
 
 main {
   margin: 10px 20px;
-  border: 2px solid black;
+  border: 2px solid #777;
   padding: 10px 20px;
   border-radius: 7px;
+  box-shadow: -4px 3px 10px rgb(207, 141, 0);
 }
-main h2 {
-  color: rgb(0, 60, 255);
-  animation-delay: 1s;
+main h1, main h2, main nav {
+  font-size: 32px;
+  text-align: center;
+  color: rgb(123, 49, 0);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   --animate-duration: 5s;
+  text-shadow: -2px 2px 0px orange;
 }
 main p {
-  color: #668aff;
-  font-size: 18px;
+  color: #e15a00;
+  font-size: 180px;
   text-align: left;
-}
-main p:last-child {
   font-weight: bold;
-  color: rgb(238, 0, 255);
+  color: rgb(75, 43, 0);
   text-align: center;
-}
-
-body {
-  background-color: rgb(255, 250, 245);
-  width: 100%;
-}
-
-main {
-  margin: 10px 20px;
-  border: 2px solid black;
-  padding: 10px 20px;
-  border-radius: 7px;
-}
-main h1 {
-  text-align: center;
-}
-main h2 {
-  color: rgb(0, 60, 255);
-  animation-delay: 1s;
-  --animate-duration: 5s;
-}
-main p {
-  color: #668aff;
-  font-size: 18px;
-  text-align: left;
-}
-main p:last-child {
-  font-weight: bold;
-  color: rgb(238, 0, 255);
-  text-align: center;
-}
-
-p {
-  text-align: right;
-  font-style: italic;
-  color: rgb(0, 68, 87);
-}
-
-main p {
-  animation: fadeIn 10s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+  font-size: 18px !important;
+}/*# sourceMappingURL=style.css.map */

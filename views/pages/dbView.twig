@@ -1,0 +1,18 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+<h1 class="font-bold text-center animate__hinge ui segment">Gestion DataBase</h1>
+
+<div class="relative rounded-xl overflow-auto animate__hinge ui segment">
+  <p>{{data.txt}}</p>
+    
+    <p class="gc7">Test</p>
+    
+  <div class="ui buttons">
+    <div class="ui fitted toggle checkbox"><input type="checkbox" class="hidden" readonly="" tabindex="0"/><label>Seed</label></div>
+    <button class="ui inverted red button"><i class="align justify icon"></i><i class="database icon"></i>Rouge</button>
+  </div>
+</div>
+<i class="expand arrows alternate icon"></i>
+{% endblock %}
+

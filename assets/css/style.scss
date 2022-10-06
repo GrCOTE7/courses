@@ -1,8 +1,6 @@
-@import 'bases';
-
-$encre: rgb(0, 60, 255);
+$encre: rgb(123, 49, 0);
 $encretxt: lighten($encre, 20%);
-$background: rgb(255, 250, 245);
+$background: rgb(255, 246, 238);
 
 body {
   background-color: $background;
@@ -11,59 +9,35 @@ body {
 
 main {
   margin: 10px 20px;
-  border: 2px solid black;
+  border: 2px solid #777;
   padding: 10px 20px;
   border-radius: 7px;
+  box-shadow: -4px 3px 10px rgb(207, 141, 0);
 
-  h1 {
+
+  h1,
+  h2,
+  nav {
+    font-size: 32px;
     text-align: center;
-  }
-
-  h2 {
     color: $encre;
     animation-delay: 1s;
     --animate-duration: 5s;
+    text-shadow: -2px 2px 0px orange;
+    ;
   }
-
+  
   p {
     color: $encretxt;
-    font-size: 18px;
+    font-size: 180px;
     text-align: left;
+    transition: all 3s;
+    --animate-duration: 3s;
 
-    &:last-child {
+    &:first-child {
       font-weight: bold;
-      color: rgb(238, 0, 255);
-      text-align: center;
+      color: rgb(75, 43, 0);
+      font-size: 18px !important;
     }
-  }
-}
-
-p {
-  text-align: right;
-  font-style: italic;
-  color: rgb(0, 68, 87);
-}
-
-main h2 {
-  // display: none;
-}
-
-main p {
-  // opacity: 0;
-  animation: fadeIn 10s;
-  // animation-delay: 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
